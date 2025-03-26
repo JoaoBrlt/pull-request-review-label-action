@@ -1,0 +1,10 @@
+# Files ignored by Prettier, see https://prettier.io/docs/ignore
+
+# Output
+dist/
+
+# Dependencies
+node_modules/
+
+# Tests
+coverage/

@@ -1,0 +1,52 @@
+{
+  "name": "pull-request-review-label-action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Action that labels pull requests depending on the review status.",
+  "license": "GPL-3.0-only",
+  "author": "João Brilhante",
+  "homepage": "https://github.com/JoaoBrlt/pull-request-review-label-action",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoBrlt/pull-request-review-label-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JoaoBrlt/pull-request-review-label-action/issues"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "update:check": "ncu",
+    "update": "ncu --interactive",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "watch": "npm run build -- --watch"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.27",
+    "@vercel/ncc": "^0.38.3",
+    "npm-check-updates": "^17.1.16",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "pull",
+    "request",
+    "label",
+    "review",
+    "status"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

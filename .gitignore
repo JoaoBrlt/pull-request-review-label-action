@@ -1,0 +1,17 @@
+# Untracked files, see https://git-scm.com/docs/gitignore
+
+# Dependencies
+node_modules/
+
+# Tests
+coverage/
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code
+.vscode
+
+# System files
+.DS_Store
+Thumbs.db
